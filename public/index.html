@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Chat App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Auth screen -->
+  <div id="auth-screen" class="card">
+    <h2 id="auth-title">Login</h2>
+    <input id="username" type="text" placeholder="Username" autocomplete="username" />
+    <input id="password" type="password" placeholder="Password" autocomplete="current-password" />
+    <button id="auth-btn">Login</button>
+    <p class="toggle">
+      <span id="toggle-text">No account?</span>
+      <a href="#" id="toggle-link">Register</a>
+    </p>
+    <p id="auth-error" class="error"></p>
+  </div>
+
+  <!-- Chat screen -->
+  <div id="chat-screen" class="chat hidden">
+    <header>
+      <div>
+        <strong>Chat Room</strong>
+        <small id="online-count"></small>
+      </div>
+      <div>
+        <span id="me"></span>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </header>
+    <div id="messages"></div>
+    <form id="chat-form">
+      <input id="message-input" type="text" placeholder="Type a message..." autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
